@@ -22,6 +22,11 @@ $result = ($num1 + $num2) / 2;
 
 echo $result;
 
+while ($num1>=0) {
+  echo $num1.'<br>';
+  $num1--;
+}
+
 $number1 = 10.5;
 $number2 = '10.5';
 
