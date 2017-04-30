@@ -51,4 +51,12 @@ $names = array('Austin'=>24,'James'=>34,'Andrew'=>14);
 print_r($names);
 echo $names['James'];
 
+$people = array(
+  'Jimmy'=>array('Age'=>22, 'Hair'=>'Blonde'),
+  'Tim'=>array('Age'=>45, 'Hair'=>'Brown'),
+  'Bob'=>array('Age'=>33, 'Hair'=>'Red')
+);
+
+echo $people['Jimmy']['Hair'];
+
 ?>
