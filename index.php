@@ -46,4 +46,9 @@ switch ($num1) {
   break;
 }
 
+// You can assign your own key=>value pair in the array
+$names = array('Austin'=>24,'James'=>34,'Andrew'=>14);
+print_r($names);
+echo $names['James'];
+
 ?>
