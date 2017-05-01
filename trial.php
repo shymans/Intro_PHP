@@ -14,6 +14,8 @@
 
 if(isset($_GET['name'])){ $name = $_GET['name']; }
 if(isset($_GET['age'])){ $age = $_GET['age']; }
+
+// These calls gave an undefined index error, not sure why. The code above solved the problem.
 //$name = $_GET['name'];
 //$age = $_GET['age'];
 
