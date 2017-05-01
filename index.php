@@ -76,6 +76,22 @@ for ($num=1;$num<=10;$num++) {
 	echo $num.'<br>';
 }
 
+function name($name, $age) {
+	return 'My name is '.$name.' and my age is '.$age;
+}
 
+$returnvalue = name('Dale', 35);
+echo $returnvalue;
+
+
+function add() {
+	$total = 0;
+	foreach(func_get_args() as $arg) {
+		$total = $total + (int)$arg;
+	}
+	return $total;
+}
+
+echo add(5, 10, 1);
 
 ?>
