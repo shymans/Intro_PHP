@@ -94,4 +94,8 @@ function add() {
 
 echo add(5, 10, 1);
 
+$bignum = 25123.4627452;
+//You can control what is used to seperate your number within the number_format function
+echo 'I have &pound;', number_format($bignum, 2, ',', ' ');
+
 ?>
