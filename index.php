@@ -56,6 +56,14 @@ $names = array('Austin'=>24,'James'=>34,'Andrew'=>14);
 print_r($names);
 echo $names['James'];
 
+foreach($names as $value) {
+	echo $value.'<br>';
+}
+
+foreach($names as $key => $value) {
+	echo $key.' is '.$value.'<br>';
+}
+
 $people = array(
   'Jimmy'=>array('Age'=>22, 'Hair'=>'Blonde'),
   'Tim'=>array('Age'=>45, 'Hair'=>'Brown'),
@@ -63,5 +71,11 @@ $people = array(
 );
 
 echo $people['Jimmy']['Hair'];
+
+for ($num=1;$num<=10;$num++) {
+	echo $num.'<br>';
+}
+
+
 
 ?>
