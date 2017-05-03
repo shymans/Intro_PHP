@@ -21,7 +21,7 @@ You're not Alex? Please type your name:<br />
 */
 
 
-$levels = array(
+$GLOBALS['levels'] = array(
 	1 => array(
 			'name' => 'Level 1',
 			'desc' => 'This is the first level'
@@ -36,7 +36,14 @@ $levels = array(
 		)
 );
 
-echo '<pre>', print_r($levels, true), '</pre>';
+function level_data($level, $data) {
+	if (array_key_exists() === true) {
+		
+	}
+}
+
+// Prints out the Array in a clean readable way
+echo '<pre>', print_r($GLOBALS['levels'], true), '</pre>';
 
 
 
