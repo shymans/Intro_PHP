@@ -37,10 +37,14 @@ $GLOBALS['levels'] = array(
 );
 
 function level_data($level, $data) {
-	if (array_key_exists() === true) {
-		
+	if (array_key_exists($level, $GLOBALS['level']) === true) {
+		return $GLOBALS['level']['$level']['$data'];
+	} else {
+			return false;
 	}
 }
+
+echo level_data(1, 'desc');
 
 // Prints out the Array in a clean readable way
 echo '<pre>', print_r($GLOBALS['levels'], true), '</pre>';
