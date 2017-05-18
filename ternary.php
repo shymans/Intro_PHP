@@ -19,4 +19,9 @@ if ($old_enough === true) {
 */
 echo ($old_enough === true) ? 'Old enough' : 'Not old enough';
 
+
+// Creating a random number
+$rand = rand(1, 6);
+echo $rand;
+
 ?>
