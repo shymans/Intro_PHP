@@ -20,10 +20,20 @@ try {
 }
 */
 
+// A single query into the DB to change a specific parameter
+/*
 $db->query("
 	UPDATE users
 	SET last_name = 'Smith'
 	WHERE id = 1
 ");
+*/
+
+$users = $db->query("
+	SELECT * FROM users
+");
+
+echo '<pre>', var_dump($users->fetchAll(PDO::FETCH_ASSOC)), '</pre>';
+
 
 ?>
