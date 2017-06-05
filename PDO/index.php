@@ -33,7 +33,20 @@ $users = $db->query("
 	SELECT * FROM users
 ");
 
-echo '<pre>', var_dump($users->fetchAll(PDO::FETCH_ASSOC)), '</pre>';
+//echo '<pre>', var_dump($users->fetchAll(PDO::FETCH_ASSOC)), '</pre>';
+
+while ($user = $users->fetchObject()) {
+	echo $user->email, '<br>';
+}
+
+// The same thing can be done using a foreach method 
+/*
+$users = $users->fetchAll(PDO::Fetch_OBJ);
+
+foreach ($users as $user) {
+	echo $user->email, '<br>';
+}
+*/
 
 
 ?>
