@@ -3,7 +3,12 @@
 // var_dump(PDO::getAvailableDrivers());
 
 // For testing purposes only, never in a live environment
-// ini_set('display_errors', 'On');
+ini_set('display_errors', 'On');
+
+class User
+{
+	
+}
 
 
 $db = new PDO('mysql:host=127.0.0.1;dbname=test', 'root', '');
@@ -33,11 +38,14 @@ $users = $db->query("
 	SELECT * FROM users
 ");
 
+
 //echo '<pre>', var_dump($users->fetchAll(PDO::FETCH_ASSOC)), '</pre>';
 
+/*
 while ($user = $users->fetchObject()) {
 	echo $user->email, '<br>';
 }
+*/
 
 // The same thing can be done using a foreach method 
 /*
@@ -47,6 +55,12 @@ foreach ($users as $user) {
 	echo $user->email, '<br>';
 }
 */
+
+$users->setFetchMode(PDO::FETCH_CLASS, 'User');
+
+$users = $users->fetch();
+
+echo '<pre>', var_dump($users->email), '</pre>';
 
 
 ?>
