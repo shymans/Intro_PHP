@@ -7,7 +7,10 @@ ini_set('display_errors', 'On');
 
 class User
 {
-	
+		public function getFullName()
+		{
+			return "{$this->first_name} {$this->last_name}";
+		}
 }
 
 
@@ -58,9 +61,13 @@ foreach ($users as $user) {
 
 $users->setFetchMode(PDO::FETCH_CLASS, 'User');
 
-$users = $users->fetch();
+//$users = $users->fetch();
 
-echo '<pre>', var_dump($users->email), '</pre>';
+//echo '<pre>', var_dump($users->email), '</pre>';
+
+while ($user = $users->fetch()) {
+	echo $user->getFullName(), '<br>';
+}
 
 
 ?>
