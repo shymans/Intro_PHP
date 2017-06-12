@@ -2,6 +2,7 @@
 
 ini_set('display_errors', 'On');
 
+// You should always keep your classes in a seperate file, this is just for practice
 Class User
 {
 	protected $dates = [
