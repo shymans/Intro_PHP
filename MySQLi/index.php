@@ -13,6 +13,7 @@ $users = $db->query("SELECT email, created, CONCAT(first_name, ' ', last_name) a
 		<title>MySQLi</title>
 	</head>
 	<body>
+		<!-- You can also use fetch_array or fetch_object, depending on what you want to do with the data -->
 		<?php while ($row = $users->fetch_assoc()): ?>
 			<p><?php echo $row['full_name']; ?>, <?php echo $row['email']; ?>, <?php echo $row['created']; ?></p>
 		<?php endwhile; ?>
