@@ -4,6 +4,21 @@ require_once 'db.php';
 
 $users = $db->query("SELECT email, created, CONCAT(first_name, ' ', last_name) as full_name FROM users");
 // Never send a db query within a loop
+
+/* Grabbing the count of users from the db ( use COUNT for a few thousand users, SQL_ for larger db's )
+
+$usersResult = $db->query("SELECT COUNT(id) as count FROM users");
+$users = $usersResult->fetch_object();
+echo $users->count; 
+
+OR
+
+$count = db->query("SELECT SQL_CALC_FOUND_ROWS id FROM users");
+$countResult = db->query("SELECT FOUND_ROWS() as count");
+var_dump($countResult->fetch_object());
+
+*/
+
 ?>
 
 <!DOCTYPE html>
