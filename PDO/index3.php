@@ -20,7 +20,7 @@ if (!empty($_POST)) {
 		'last_name' => $lastName,
 	]);
 }
-
+// lastInsertId(); -> pulls the ID of the user you just created
 ?>
 
 <!DOCTYPE html>
