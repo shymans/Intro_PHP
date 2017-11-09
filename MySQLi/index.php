@@ -19,6 +19,10 @@ var_dump($countResult->fetch_object());
 
 */
 
+/* How to see affected rows by an update
+$updateUser = $db->query("UPDATE users SET last_name = 'Garett'");
+echo "{$db->affected_rows} rows were updated.";
+*/
 ?>
 
 <!DOCTYPE html>
