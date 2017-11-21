@@ -38,4 +38,3 @@ echo "{$db->affected_rows} rows were updated.";
 		<?php endwhile; ?>
 	</body>
 </html>
-		
