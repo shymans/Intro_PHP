@@ -1,5 +1,7 @@
 <?php
 	require_once 'db.php';
+	
+/*
 	// Escape anything that isn't given by you, the coder
 	if (!empty($_POST)) {
 		$email = $db->escape_string($_POST['email']);
@@ -11,6 +13,24 @@
 			VALUES ('{$email}', '{$firstName}', '{$lastName}', NOW())
 		");
 	}
+*/
+	// OR
+	
+		if (!empty($_POST)) {
+		$email = $_POST['email'];
+		$firstName = $_POST['first_name'];
+		$lastName = $_POST['last_name'];
+		
+		$prepared = $db->prepare("
+			INSERT INTO users (email, first_name, last_name, created)
+			VALUES (?, ?, ?, NOW())
+		");
+		
+		$prepared->bind_param('sss', $email, $firstName, $lastName);
+		
+		$prepared->execute();
+	}
+	
 
 ?>
 

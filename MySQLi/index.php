@@ -10,6 +10,7 @@ $users = $db->query("SELECT email, created, CONCAT(first_name, ' ', last_name) a
 $usersResult = $db->query("SELECT COUNT(id) as count FROM users");
 $users = $usersResult->fetch_object();
 echo $users->count; 
+// After any query, it's good practice to $usersResult->free(); to free up memory
 
 OR
 
